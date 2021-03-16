@@ -1,4 +1,4 @@
-function getSite(config) => {
+function getSite(config){
 	console.log(config);
 	const site = 'marca';
 	return site;
@@ -15,21 +15,23 @@ function remove(items = []){
 		}
 	});
 	document.body.style.setProperty("overflow", "auto", "important");
+	document.html.style.setProperty("overflow", "auto", "important");
 }
 
 function runSelector(){
 	window.requestAnimationFrame(function(){
 		const xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+		xhr.open("GET", "https://raw.githubusercontent.com/hreyeslo/blocker-remove/master/config.json", true);
 		xhr.setRequestHeader("Content-Type", "*/*");
 		xhr.onload = function () {
 			const config = JSON.parse(xhr.responseText);
-			const site = getSite(config);
-			try{
-				remove(config.nodes[site]);
-			}catch(e){
-				console.error('Config error');
-			}
+			console.log(config);
+			// const site = getSite(config);
+			// try{
+			// 	remove(config.nodes[site]);
+			// }catch(e){
+			// 	console.error('Config error');
+			// }
 		}
 		xhr.send();
 	});
