@@ -1,20 +1,3 @@
-// CONFIG
-
-const nodes = {
-	'marca': [
-		{
-			type: 'class',
-			value: 'fc-ab-root'
-		},
-		{
-			type: 'id',
-			value: 'didomi-host'
-		}
-	]
-};
-
-// METHODS
-
 function getSite(config) => {
 	console.log(config);
 	const site = 'marca';

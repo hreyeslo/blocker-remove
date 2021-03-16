@@ -1,0 +1,17 @@
+{
+	"sites": {
+		"marca": "pattern"
+	},
+	"nodes": {
+		"marca": [
+			{
+				"type": "class",
+				"value": "fc-ab-root"
+			},
+			{
+				"type": "id",
+				"value": "didomi-host"
+			}
+		]
+	}
+}
