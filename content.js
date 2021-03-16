@@ -15,23 +15,20 @@ function remove(items = []){
 		}
 	});
 	document.body.style.setProperty("overflow", "auto", "important");
-	document.html.style.setProperty("overflow", "auto", "important");
 }
 
 function runSelector(){
 	window.requestAnimationFrame(function(){
 		const xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://nifty-brattain-b4f5c4.netlify.app/config.json", true);
-		xhr.setRequestHeader("Content-Type", "*/*");
+		xhr.open("GET", "https://cdn.jsdelivr.net/gh/hreyeslo/blocker-remove@master/config.json", true);
 		xhr.onload = function () {
 			const config = JSON.parse(xhr.responseText);
-			console.log(config);
-			// const site = getSite(config);
-			// try{
-			// 	remove(config.nodes[site]);
-			// }catch(e){
-			// 	console.error('Config error');
-			// }
+			const site = getSite(config);
+			try{
+				remove(config.nodes[site]);
+			}catch(e){
+				console.error('Config error');
+			}
 		}
 		xhr.send();
 	});

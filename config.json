@@ -1,6 +1,7 @@
 {
 	"sites": {
-		"marca": "pattern"
+		"marca": "pattern",
+		"mundo": "pattern"
 	},
 	"nodes": {
 		"marca": [
