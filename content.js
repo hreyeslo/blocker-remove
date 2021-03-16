@@ -21,7 +21,7 @@ function remove(items = []){
 function runSelector(){
 	window.requestAnimationFrame(function(){
 		const xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://raw.githubusercontent.com/hreyeslo/blocker-remove/master/config.json", true);
+		xhr.open("GET", "https://hreyeslo.github.io/blocker-remove/config.json", true);
 		xhr.setRequestHeader("Content-Type", "*/*");
 		xhr.onload = function () {
 			const config = JSON.parse(xhr.responseText);
