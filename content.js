@@ -21,7 +21,7 @@ function remove(items = []){
 function runSelector(){
 	window.requestAnimationFrame(function(){
 		const xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://hreyeslo.github.io/blocker-remove/config.json", true);
+		xhr.open("GET", "https://nifty-brattain-b4f5c4.netlify.app/config.json", true);
 		xhr.setRequestHeader("Content-Type", "*/*");
 		xhr.onload = function () {
 			const config = JSON.parse(xhr.responseText);
