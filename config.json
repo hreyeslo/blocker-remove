@@ -12,6 +12,10 @@
 			{
 				"type": "id",
 				"value": "didomi-host"
+			},
+			{
+				"type": "id",
+				"value": "acceptationCMPWall"
 			}
 		]
 	}
